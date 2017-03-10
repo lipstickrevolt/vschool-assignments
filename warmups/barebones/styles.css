@@ -1,0 +1,14 @@
+h1 {
+    font-family: Impact, Charcoal, sans-serif;
+    background-color: aqua;
+    color: maroon;
+    text-align: center;
+}
+p {
+    font-family: Verdana, Geneva, sans-serif;
+    background-color: maroon;
+    color: aqua;
+    display: inline-block;
+    width: 33%;
+    vertical-align: text-top;
+}

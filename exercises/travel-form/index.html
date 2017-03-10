@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <h1>Broaden Horizons</h1>
+   <h3>Get out of town and enjoy it</h3>
+    <form id="myForm" name="myForm">
+        <div class="row">
+            <div class="col-4">
+                First name <input type="text" name="name">
+            </div>
+            <div class="col-4">
+                Last name <input type="text" name="lastName">
+            </div>
+            <div class="col-4">
+                Age <input type="number" name="age">
+            </div>
+        </div>
+        <div class="row">   
+            <div class="col-4">
+                Gender <select name="gender">
+                            <option value="1">Select...</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                       </select>
+            </div>
+        
+            <div class="col-4">
+                Traveling to <select name="travelingTo">
+                            <option value="1">Select... </option>
+                            <option value="Paris France">Paris, France</option>
+                            <option value="Bora Bora India">Bora Bora, India</option>
+                            <option value="Dubai UAE">Dubai, UAE</option>
+                         </select>
+            </div>
+            <div class="col-4">
+                Dietary restrictions: <br><input type="checkbox" name="diet" value="none">None<br>
+<input type="checkbox" name="diet" value="Kosher">Kosher<br>
+<input type="checkbox" name="diet" value="Vegetarian">Vegetarian<br>
+<input type="checkbox" name="diet" value="Dairy Free">Dairy Free
+<br>
+            </div>
+        </div>
+        <br /><br />
+        <input id="button" type="submit" value="SUBMIT">
+    </form>
+</body>
+<script src="app.js"></script>
+</html>

@@ -1,0 +1,14 @@
+h1 {
+    padding-bottom: 50px;
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+}
+ul {
+    margin-top: 40px;
+    list-style-type: none;
+    float: left;
+}
+img {
+    display: inline-block;
+    width: 300px;
+}

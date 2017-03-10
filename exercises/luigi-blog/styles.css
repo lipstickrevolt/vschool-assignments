@@ -1,0 +1,53 @@
+@font-face {
+   font-family: 'Super';
+   src: url(SuperMario256.ttf) format('truetype');
+}
+.luigi {
+    color: red;
+    font-family: 'Super';
+    font-size: 53px;
+    padding-left: 30px;
+}
+p {
+}
+.row {
+    padding: 0px;
+    margin: 0px;
+}
+.col-md-8 {
+    display: inline-block;
+}
+#header {
+    height: 100px;
+    background-color: #f9db00;
+}
+#holdLuigi {
+    height: 360px;
+    background-color: red;
+}
+#luigiJump {
+    padding-top: 10px;
+}
+#aboutMe {
+    text-align: center;
+    height: 190px;
+    color: red;
+    font-family: 'Super';
+    font-size: 40px;
+}
+#footer {
+    height: 90px;
+    background-color: #f9db00;
+}
+#bout {
+    padding-top: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+#para {
+    font-size: 22px;
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+#shroom {
+    margin-top: 5px;
+}

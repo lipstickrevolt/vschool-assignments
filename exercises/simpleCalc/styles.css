@@ -1,0 +1,42 @@
+button {
+    width: 120px;
+    height: 20px;
+}
+h1 {
+    text-align: center;
+    font-family: 'Exo', sans-serif;
+}
+body {
+    align-content: center;
+}
+.add {
+    background-color: maroon;
+    color: white;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 24px;
+    width: 300px;
+    padding-left: 10px;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+.subtract {
+    background-color: turquoise;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 24px;
+    width: 300px;
+    padding-left: 10px;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+.multiply {
+    background-color: yellow;
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    font-size: 24px;
+    width: 300px;
+    padding-left: 10px;
+    margin: auto;
+    left: 0;
+    right: 0;
+}

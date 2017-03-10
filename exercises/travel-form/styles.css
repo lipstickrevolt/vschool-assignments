@@ -1,0 +1,29 @@
+h1 {
+    text-align: center;
+    font-family: 'Baloo Bhaina', cursive;
+    font-size: 62px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    height: 80px;
+}
+h3 {
+   text-align: center;
+    font-family: 'Baloo Bhaina', cursive; 
+    margin: 0;
+}
+.col-4 {
+    display: inline-block;
+    width: 32%;
+    border: 1px solid black;
+    padding: 5px;
+    position: relative;
+}
+#button {
+    margin: auto;
+    display: block;
+    height: 150px;
+    width: 150px;
+    font-size: 32px;
+    background-color: teal;
+    font-family: 'Baloo Bhaina', cursive;
+}

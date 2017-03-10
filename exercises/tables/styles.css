@@ -1,0 +1,29 @@
+table {  
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 570px;
+    align-content: center;
+    margin: auto;
+    flex: auto;
+}
+h1 {
+    text-align: center;
+}
+td {  
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    background-color: greenyellow;
+}
+tr:nth-child(odd) {  
+    background-color: #dddddd;
+}
+
+td:hover {
+    background-color: #ebebeb;
+}

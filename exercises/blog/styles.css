@@ -1,0 +1,70 @@
+body {
+    background: url("https://s-media-cache-ak0.pinimg.com/736x/65/c9/ba/65c9ba984e90d29163196b211369ee63.jpg");
+}
+h3 {
+    font-family: 'Rubik Mono One', sans-serif;
+}
+p {
+    font-family: 'Roboto', sans-serif;
+}
+.publish {
+    background-color: darkorange;
+}
+.container {
+    position: relative;
+    padding-top: 70px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    width: 50%;
+}
+.nav li{
+    list-style-type: none;
+    width: 100%;
+    display: inline;
+    cursor: hand;
+    padding-right: 20px;
+    font-family: 'Roboto', sans-serif; 
+}
+.nav li a:hover{
+    color: red;
+}
+.nav a {
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+}
+.nav {
+    position: fixed;
+    background-color: #333333;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+    padding: 0;
+}
+.blog1 {
+    border: 10px solid black;
+    margin: 10px;
+    background-color: bisque;
+}
+.blog2 {
+    border: 10px solid black;
+    margin: 10px;
+    background-color: bisque;
+}
+.blog3 {
+    border: 10px solid black;
+    margin: 10px;
+    background-color: bisque;
+}
+.blog4 {
+    border: 10px solid black;
+    margin: 10px;
+    background-color: bisque;
+}
+.blog5 {
+    border: 10px solid black;
+    margin: 10px;
+    background-color: bisque;
+}

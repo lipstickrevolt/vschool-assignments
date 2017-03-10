@@ -1,0 +1,45 @@
+h1 {
+    font-family: Impact, Charcoal, sans-serif;
+    background-color: aqua;
+    color: maroon;
+    text-align: center;
+}
+p {
+    font-family: Verdana, Geneva, sans-serif;
+    background-color: maroon;
+    color: aqua;
+    display: inline-block;
+    vertical-align: text-top;
+}
+h3 {
+    display: inline-block;
+    background-color: white;
+}
+strong {
+    color: white;
+}
+img {
+    width: auto;
+    height: 150px;
+    float: right;
+    display: inline;
+}
+a {
+    text-decoration: none;
+    color: yellow;
+}
+.shirt {
+    float: left;
+}
+.para {
+    display: inline-block;
+    width: 33%;
+    column-width: auto;
+}
+.main {
+    background-image: url('https://sites.google.com/a/slcusd.org/steam-resources/_/rsrc/1425270033696/html/HTML-Code.jpg');
+    opacity: .5;
+}
+.column {
+    opacity: 1;
+}

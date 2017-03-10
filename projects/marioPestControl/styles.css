@@ -1,0 +1,66 @@
+@font-face {
+   font-family: superMario;
+   src: url(SuperMario256.ttf);
+}
+
+div {
+    display: inline-block;
+    margin: 60px;
+}
+
+h1 {
+    text-align: center;
+    font-family: superMario;
+}
+body {
+    background-image: url("https://images7.alphacoders.com/333/333217.jpg");
+    background-position: center;
+}
+strong {
+    font-family: 'Rubik Mono One', sans-serif;
+    background-color: white;
+}
+
+#goombas {
+    background: url("http://vignette3.wikia.nocookie.net/mario/images/5/53/Goomba_Artwork_(The_Thousand-Year_Door).png/revision/latest?cb=20121021161818") no-repeat;
+    height: 250px;
+    width: 200px;
+}
+#bobOmbs {
+    background-size: cover;
+    background-image: url("http://vignette2.wikia.nocookie.net/mario/images/7/79/Bob-omb_(Mario_Kart_8).png/revision/latest?cb=20140505194042");
+    height: 200px;
+    width: 200px;
+}
+#cheepCheeps {
+    background: url("https://www.mariowiki.com/images/thumb/b/b0/SpinyCheepNSMBU.png/200px-SpinyCheepNSMBU.png");
+    height: 210px;
+    width: 200px;
+}
+
+.totalPrice {
+    margin: 250px 40px 30px 40px;
+    border: 10px solid white;
+    width: 172px;
+   background-color: white;
+}
+
+#goombaOutput {
+    margin-top: 10px;
+}
+#bobOmbsOutput {
+    margin-top: 10px;
+}
+#cheepCheepOutput {
+    margin-top: 10px;
+}
+.nextToTotal {
+    display: inline;
+}
+.shabang {
+    margin: 150px 40px 30px 40px;
+}
+.container-fluid {
+    border: 10px solid black;
+    margin-left: 120px;
+}
