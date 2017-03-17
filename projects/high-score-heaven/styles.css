@@ -1,0 +1,14 @@
+table, th, td {
+    border: 1px solid #330066;
+    
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+table {
+    width: 100%;
+    border-right-width: 100px;
+    border-left-width: 100px;
+    border-top-width: 100px;
+    border-bottom-width: 100px;
+}

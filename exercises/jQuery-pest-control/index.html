@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mario Pest Control</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <h1>
+          Mario Pest Control
+          </h1>
+        <div class="nightTime">
+            <button id="nightLight" class="nightTime">Night Light</button>
+        </div>  
+        <div class="col-md-4" id="goombas">
+            <div class="totalPrice">
+                <input type="text" id="goombaInput">
+                <button id="goombaButton" type="button" onclick="goombasCalc()">Calc Me!</button>
+                <br />
+                <br />
+                <strong>Total:</strong>
+                <span id="goombaOutput">
+                        
+                    </span>
+            </div>
+        </div>
+        <div class="col-md-4" id="bobOmbs">
+            <div class="totalPrice">
+                <input type="text" id="bobOmbsInput">
+                <button id="bombButton" type="button" onclick="bobOmbsCalc()">
+                    Calc Me!</button>
+                <br />
+                <br />
+                <strong>Total:</strong>
+                <span id="bobOmbsOutput">
+                        
+                    </span>
+            </div>
+
+        </div>
+        <div class="col-md-4" id="cheepCheeps">
+            <div class="totalPrice">
+                <input type="text" id="cheepCheepInput">
+                <button id="cheepButton" type="button" onclick="cheepCheepCalc()">Calc Me!</button>
+                <br />
+                <br />
+                <strong>Total:</strong>
+                <span id="cheepCheepOutput">
+                        
+                    </span>
+            </div>
+        </div>
+        <br />
+        <div class="shabang nightLight">
+            <button id="shabangButton" class="btn btn-success" type="text" onclick="shabang()">Pay Mario</button>
+        </div>
+        <div id="shabangTotal" class=" nightLight">
+
+        </div>
+    </div>
+    <footer>
+
+    </footer>
+    <audio id="audio">
+        <source src="Mario-coin-sound.mp3" type="audio/mp3">
+    </audio>
+</body>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="app.js"></script>
+
+</html>

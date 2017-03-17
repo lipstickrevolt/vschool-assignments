@@ -1,95 +1,144 @@
 var readline = require('readline-sync');
-var specialItems = ["Gold", "Silver", "Crown", "Sword"];
-var monsters = [{
-        name: "Zombie",
-        HP: 25
-}, {
-        name: "Hitler",
-        HP: 40
-},
-    {
-        name: "Donald Trump",
-        HP: 60
-               }];
+var specialItems = ["Gold", "Silver", "Shield", "Sword"];
+var userItems = [];
+
+function CreateMonster(name, life, HP, runDam) {
+    this.name = name;
+    this.life = life;
+    this.HP = HP;
+    this.runDam = runDam;
+}
+
+var player = {
+    name: playerName,
+    life: 200,
+    HP: 100,
+    runDam: 5,
+};
+
+var monsters = [];
+
+
 console.log("Welcome to the amazing world of collosal adventures!");
 
 var playerName = readline.question("Please enter your first name: ");
 console.log(playerName);
 
-function walking() {
-    var pressW = readline.question("Please enter the (w) key to walk");
-    console.log(pressW);
-    if (pressW = "w") {
-        var roll = (Math.floor(Math.random() * (4 - 1) + 1);
-            if (roll = 1) {
-                return wildEnemy();
-            } else {
-                return walking();
-            }
-        }
-    }
-}
-walking();
+var isGameOn = true;
 
-function wildEnemy() {
-    if (random.wildEnemy appears) {
-        user choose(run or attack)
-    }
-    if (attack) {
-        random.power(min, max)
-    } else if (run) {
-        random.num(1, 2);
-    }
+function walking() {
+    var pressW = readline.question("Please enter the (w) key to walk or press (i) to see your inventory");
+    if (pressW == "w") {
+        var roll = Math.floor(Math.random() * ((3 - 1) + 1) + 1);
+        if (roll == 1) {
+            wildEnemyAttack();
+        } else if (roll == 2) {
+            console.log("you are safe for now");
+            walking();
+        } else {
+            console.log("you are safe for now");
+            walking();
+        }
+    } else if(pressW == "i"){
+        printInventory();
+        walking();
+    } 
+}
+
+generateHitler();
+generateTrump();
+generateZombie();
+
+function findRandMon() {
+    var randMonster = monsters[Math.floor(Math.random() * (monsters.length))];
+    return randMonster;
+}
+findRandMon();
+
+function fighting(randMonster) {
+    player.life = player.life - randMonster.HP;
+    console.log("your life is now " + player.life);
+    randMonster.life = randMonster.life - player.HP;
 }
 
 function wildEnemyAttack() {
-    random.attack;
-    if user wins {
-        give player HP and random.speicalItems
+
+    var randMonster = findRandMon();
+//    var options = ["run", "attack"];
+//    var index = readline.keyInSelect(options, randMonster.name + ' has appeared. Do you want to run or attack?');
+//    console.log(index);
+
+    while (randMonster.life > 0 && player.life > 0) {
+        var options = ["run", "attack"];
+        var index = readline.keyInSelect(options, "you are still fighting " + randMonster.name + " you are almost done!");
+        if (index === 0) {
+            var runChance = Math.floor(Math.random() * ((2 - 1) + 1));
+            if (runChance === 1) {
+                console.log("You escaped");
+                break;
+            } else {
+                console.log(`you took ${randMonster.runDam} damage while running`);
+                player.life = player.life - randMonster.runDam;
+                randMonster.life = randMonster.life - player.runDam;
+            }
+        } else if (index === 1) {
+            fighting(randMonster);
+        }
+
+        if (randMonster.life < 1) {
+            var randItem = specialItems[Math.floor(Math.random() * (3 - 0) + 0)];
+            console.log("You have killed " + randMonster.name);
+            console.log("You received a " + randItem);
+            userItems.push(randItem);
+        }
+        if (player.life < 1) {
+            console.log("You have been killed! GAME OVER!");
+        }
+//         else {
+//            if (randMonster.name === "Zombie") {
+//                console.log("get ready to fight " + randMonster.name);
+//                console.log("now your life is " + player.life + " keep on fighting!");
+//            } else if (randMonster.name === "Hitler") {
+//                console.log("get ready to fight " + randMonster.name);
+//                console.log("now your life is " + player.life + " keep on fighting!");
+//
+//            } else if (randMonster.name === "Donald Trump") {
+//                console.log("get ready to fight " + randMonster.name);
+//                console.log("now your life is " + player.life + " keep on fighting!");
+//
+//            }
+//        }
     }
 }
 
-function inventory() {
-    if playerName wins {
-        win specialItems
-    }
-    if enter "Print" (playerName, HP, inventory)
+function printInventory(){
+    console.log(userItems);
 }
 
-function generateEnemy() {
+function generateTrump() {
+    for (var i = 0; i < 1; i++) {
+        monsters.push(new CreateMonster("Trump", 120, 60, 20));
+
+    }
+}
+
+function generateZombie() {
     for (var i = 0; i < 10; i++) {
-        var rand = etArray[Math.floor(Math.random() * etArray.length)];
+        monsters.push(new CreateMonster("Zombie", 25, 25, 5));
 
-        this.defense = this.hitPoints * 3;
-        enemyArray.push(new Character(rand, , defense));
-        console.log(enemyArray[i]);
     }
 }
 
-for every walk(Math.floor(Math.random() * (max - min) + min);
-        (wildEnemy 25 % )
-        //generateEnemy();
-        //
-        //var readline = require('readline-sync');
-        //    
-        //var operators = ["add", "sub", "mul", "div"];
-        //
-        //var firstNum = readline.question("Please enter your first number: ");
-        //console.log(firstNum);
-        //
-        //var secNum = readline.question("Please enter your second number: ");
-        //console.log(secNum);
-        //
-        //var operator = readline.keyInSelect(operators, "Please eneter the operation to perform: ");
-        //
-        //
-        //
-        //if (operator == 0){
-        //    add(firstNum, secNum);
-        //} else if (operator == 1){
-        //    subtract(firstNum, secNum);
-        //} else if (operator == 2){
-        //    multiply(firstNum, secNum);
-        //} else if (operator == 3){
-        //    divide(firstNum, secNum);
-        //}
+function generateHitler() {
+    for (var i = 0; i < 4; i++) {
+        monsters.push(new CreateMonster("Hitler", 50, 40, 10));
+    }
+}
+
+while (isGameOn) {
+    walking();
+    if (player.life < 1) {
+        isGameOn = false;
+        break;
+    }
+};

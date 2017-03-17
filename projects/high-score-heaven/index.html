@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>High-Score Heaven</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <form>
+        Name:
+        <br>
+        <input type="text" id="name" name="name">
+        <br> Game:
+        <br>
+        <input type="text" id="game" name="game">
+        <br> Date High-Score Set:
+        <br>
+        <input type="date" id="date" name="date">
+        <br> High-Score:
+        <br>
+        <input type="number" id="highScore" name="highScore">
+        <br>
+        <input type="checkbox" id="confirm" class="confirm"> Trash Talk
+        <br>
+
+        <button type="button" id="submit" value="Submit">
+            Submit</button>
+        <table style="width:100%" id="myTable">
+            <tr>
+                <th>Name</th>
+                <th>Game</th>
+                <th>Date of High-Score</th>
+                <th>High-Score</th>
+            </tr>
+            <tr>
+                <td id="name">(name)</td>
+                <td id="game">(game)</td>
+                <td id="date">(date)</td>
+                <td id="highScore">(high score)</td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="app.js"></script>
+
+</html>

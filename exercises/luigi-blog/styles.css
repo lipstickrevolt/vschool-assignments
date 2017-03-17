@@ -7,6 +7,13 @@
     font-family: 'Super';
     font-size: 53px;
     padding-left: 30px;
+    box-shadow: none;
+    width: 190px;
+    transition: all 0.5s ease-in-out;
+}
+.luigi:hover {
+    transition: all 0.5s ease-in-out;
+    box-shadow: 10px 10px 5px 0 #fff;
 }
 p {
 }
@@ -27,6 +34,13 @@ p {
 }
 #luigiJump {
     padding-top: 10px;
+    box-shadow: none;
+    transition: all 0.5s ease-in-out;
+}
+#luigiJump:hover {
+    box-shadow: 10px 10px 5px 0 #999;
+    transform: rotate(360deg);
+    
 }
 #aboutMe {
     text-align: center;
@@ -34,6 +48,10 @@ p {
     color: red;
     font-family: 'Super';
     font-size: 40px;
+    opacity: .5;
+}
+#aboutMe:hover {
+    opacity: 1;
 }
 #footer {
     height: 90px;
