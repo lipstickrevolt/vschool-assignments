@@ -33,6 +33,7 @@ body {
     height: 100%;
     padding-top: 350px;
     background-color: black;
+    margin-bottom: 10px;
 }
 .welcome {
     font-family: 'Varela Round', sans-serif;

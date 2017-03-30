@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hit-List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="container-fluid" ng-controller="myController">
+    
+        <nav class="navbar navbar-inverse">
+
+            <div class="navbar-header">
+                <img id="brand" src="https://i.ytimg.com/vi/pfxh7HEE3Vw/maxresdefault.jpg">
+            </div>
+            <ul class="nav">
+                <li class="heading">Ron Swanson's Hit List
+                </li>
+            </ul>
+        </nav>
+
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+        <div class="row">
+        <div class="col-md-offset-1 col-md-3 col-md-offset-1 title hold" ng-repeat="hittas in data">
+            
+
+            <img class="col-md-4 pics img-rounded" src="{{hittas.image}}">{{hittas.name}}
+        </div>
+    </div>
+</div>
+</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

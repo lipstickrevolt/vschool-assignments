@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Angular to do list</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Pacifico" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body class="container-fluid" ng-controller="mainCtrl">
+<div class="interact">
+    <div class="holdHeading">
+        <h1>To Do List:</h1>
+    </div>
+
+    <div class="row todoBox">
+        <div class="input-group col-xs-10 col-xs-offset-1  col-md-4 col-md-offset-4">
+
+            <span class="input-group-addon" id="basic-addon2">What to do?</span>
+            <input class="form-control" ng-model="newTodo.title" type="text" placeholder="Activity">
+        </div>
+        <div class="input-group col-xs-10 col-xs-offset-1  col-md-4 col-md-offset-4">
+            <span class="input-group-addon" id="basic-addon2">The details  </span>
+            <input class="form-control" ng-model="newTodo.description" type="text" placeholder="Description">
+        </div>
+        <div class="input-group col-xs-10 col-xs-offset-1  col-md-4 col-md-offset-4">
+            <span class="input-group-addon" id="basic-addon2">Cost</span>
+            <input class="form-control" ng-model="newTodo.price" type="text" placeholder="Price">
+        </div>
+        <div class="input-group col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-4">
+            <span class="input-group-addon" id="basic-addon2">Add photo</span>
+            <input class="form-control" ng-model="newTodo.imgUrl" type="url" placeholder="Image URL">
+        </div>
+    </div>
+    <div class="row">
+        <div class="holdAdd">
+            <button class="btn btn-lg btn-primary" ng-click="submit(newTodo)">Add</button>
+        </div>
+    </div>
+    
+    </div>
+    <div class="row">
+        <div ng-repeat="item in todoArrays">
+            <div class="col-md-3 col-xs-6 holdEachtodo" id="{{item._id}}">
+                <div ng-class="{ 'strike': strikeMe }">
+                    <div ng-class="{ 'afterComplete': strikeMe }" class="title">{{item.title}}</div>
+                    <div ng-class="{ 'afterComplete': strikeMe }" class="description">{{item.description}}</div>
+                    <div ng-class="{ 'afterComplete': strikeMe }" class="price">${{item.price}}</div>
+                    <div class="holdImg" ng-class="{ 'holdImgX': strikeMe }">
+                        <div ng-class="{ 'siblingX': strikeMe }"></div>
+                        <img ng-class="{ 'strikeImage': strikeMe }" class="image" src="{{item.imgUrl}}">
+                    </div>
+                </div>
+                <div class="complete">
+                    completed
+                    <input data-toggle="collapse" ng-model="strikeMe" type="checkbox">
+                </div>
+                <div class="deleteBtn">
+                    Delete
+                    <button ng-click="remove(item._id)">x</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

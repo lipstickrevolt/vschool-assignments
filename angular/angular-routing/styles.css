@@ -1,0 +1,16 @@
+#stateflag {
+    width: 300px;
+}
+.love {
+    height: 200px;
+}
+.holdLove {
+    display: inline-block;
+}
+#headerState {
+    position: fixed;
+    margin-top: 35px;
+}
+.state {
+    margin-top: 70px;
+}

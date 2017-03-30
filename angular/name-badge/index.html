@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Name Badge</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+
+<body class="container-fluid" ng-controller="main">
+    <p>{{test}}</p>
+    <form class="col-md-8 col-md-offset-2" name="personForm" novalidate>
+        <div class="form-group name">
+            <input required type="text" class="col-md-6 col-md-offset-3 form-control" id="nameInput" aria-describedby="firstName" ng-minlength="3"  placeholder="First Name" name="firstName" ng-model="newPerson.firstName">
+            <p ng-show="personForm.firstName.$touched && personForm.firstName.$invalid" class="col-md-2 help-text"> required</p>
+            <input type="text" class="col-md-6 form-control" id="lastName" aria-describedby="lastName" ng-model="newPerson.lastName" required ng-minlength="3" name="lastName" placeholder="Last Name">
+            <p ng-show="personForm.lastName.$touched && personForm.lastName.$invalid" class="col-md-2 help-text"> required</p>
+        </div>
+        <br>
+        <div class="form-group name">
+            <input required type="email" class="col-md-6 col-md-offset-3 form-control" ng-minlength="3"  id="inputEmail" aria-describedby="emailHelp" placeholder="Email" name="email" ng-model="newPerson.email">
+            <p ng-show="personForm.email.$touched && personForm.email.$invalid" class="col-md-2 help-text"> required</p>
+            <input required type="text" class="col-md-6  form-control" id="birthPlace" aria-describedby="placeofbirth" ng-minlength="3" placeholder="Place of Birth" name="birthPlace" ng-model="newPerson.birthPlace">
+            <p ng-show="personForm.birthPlace.$touched && personForm.birthPlace.$invalid" class="col-md-2 help-text"> required</p>
+        </div>
+        <div class="form-group name">
+            <input required type="number" class="col-md-6 col-md-offset-3 form-control" id="phoneNumber" name="phone" ng-minlength="3" ng-model="newPerson.phoneNum" placeholder="Phone">
+            <p ng-show="personForm.phone.$touched && personForm.phone.$invalid" class="col-md-2 help-text"> required</p>
+            <input required type="text" class="col-md-6 form-control" ng-minlength="3" ng-model="newPerson.favFood" id="favFood" name="favFood" placeholder="Favorite Food">
+            <p ng-show="personForm.favFood.$touched && personForm.favFood.$invalid" class="col-md-2 help-text"> required</p>
+        </div>
+
+
+        <div class="form-group name">
+
+            <textarea required class="form-control" ng-minlength="3" id="textArea" ng-model="newPerson.textArea" rows="3" name="textArea" placeholder="Tell us about yourself...."></textarea>
+            <p ng-show="personForm.textArea.$touched && personForm.textArea.$invalid" class="col-md-2 help-text"> required</p>
+
+        </div>
+        <button ng-disabled="personForm.$invalid" type="submit" class="btn btn-primary col-md-1 text-center" ng-click="submit(newPerson); personForm.$dirty=false">Submit</button>
+        
+        {{personForm.$valid}}
+    </form>
+    <br />
+    <div class="panel panel-primary col-md-10 col-md-offset-1" ng-show="person">
+        <div class="panel-heading">
+            <h3 class="panel-title">Badge:</h3>
+        </div>
+        <div class="row">
+        <div class="panel-body">
+            <div class="col-md-4 nameTag">
+                <p>Name: {{ person.firstName}} {{person.lastName}}</p>
+                <br />
+            </div>
+               <div class="col-md-offset-3 col-md-4 nameTag">
+                <br /> 
+                <p>Phone: {{person.phoneNum}}</p>
+            </div>
+            <div class="col-md-4 nameTag">
+                Place of birth: {{person.birthPlace}}
+            </div>
+               <div class="col-md-offset-3 col-md-4 nameTag">Favorite Food: {{person.favFood}}</div>
+            <div class="col-md-4 nameTag">
+                Email: {{person.email}}
+            </div>
+            <textarea class="nameTag form-control" rows="5">
+                {{person.textArea}}
+            </textarea>
+            </div>
+            
+        </div>
+        </div>
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

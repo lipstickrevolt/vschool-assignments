@@ -1,0 +1,32 @@
+form {
+    margin-top: 10px;
+}
+
+.name {
+    display: inline-flex;
+    width: 100%;
+}
+#nameInput {
+    margin-left: 0px;
+}
+#inputEmail {
+    margin-left: 0px;
+    }
+#phoneNumber {
+    margin-right: 0px;
+    margin-left: 0px;
+    
+}
+.nameTag {
+    display: flex;
+}
+.panel-primary {
+    margin-top: 20px;
+    display: inline-block;
+}
+.help-text {
+    color: red;
+}
+.btn {
+    margin-left: 47%;
+}

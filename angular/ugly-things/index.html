@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Amazing Things!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    </script>
+</head>
+<body ng-controller="mainCtrl" >
+   <div class="container-fluid">
+     <form>
+      <div class="row">
+      <div class="col-md-10">
+      <div class="form-group">
+       <input type="text" class="form-control" placeholder="Title" ng-model="title">
+          </div>
+          <div class="form-group">
+       <input type="url" class="form-control" placeholder="Img URL" ng-model="image">
+          </div>
+          <div class="form-group">
+       <input type="text" class="form-control" placeholder="Description" ng-model="description">
+          </div>
+       </div>
+       </div>
+      <div class="row">
+      <div class="col-md-10">
+       <button class="btn btn-primary" ng-click="submit()" type="submit">Submit</button>
+       </div>
+       </div>
+       </form>
+       
+       <div class="row">
+           <div class="col-md-4" ng-repeat="item in allItems">
+               <div>{{item.title}}</div>
+               <img id="fun" src="{{item.image}}">
+               <div>{{item.description}}</div>
+           </div>
+       </div>
+   </div>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script src="app.js"></script> 
+</body>
+</html>

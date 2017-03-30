@@ -1,0 +1,7 @@
+#fun {
+    width: 50%;
+}
+.form-group {
+    margin-top: 20px;
+    display: inline-flex;
+}

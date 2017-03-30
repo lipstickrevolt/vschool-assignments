@@ -1,0 +1,31 @@
+.search {
+    font-style: italic;
+    position: relative;
+}
+
+.glyphicon {
+    position: absolute;
+    right: 5%;
+    top: 10px;
+}
+#allNav {
+    font-family: Avenir, Helvetica Neue, Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+
+div.container-fluid {
+    margin-top: 10px;
+}
+.dropdown-menu:hover {
+    display: block;
+}
+.gradient {
+    background-color: rgba(252, 202, 178, 0.56);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+li a{
+    color: black;
+    margin-right: 60px;
+}

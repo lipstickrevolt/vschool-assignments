@@ -1,0 +1,25 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url("/font/DOCALLISMEONSTREET.ttf");
+}
+img {
+    height: 200px;
+}
+.textBox {
+    text-align: center;
+    width: 700px;
+    float: right;
+    padding-top: 30px;
+
+}
+.favRappers {
+    display: inline-block;
+}
+body {
+    background-image: url("https://i.ytimg.com/vi/smA1KJr0O14/maxresdefault.jpg");
+    background-size: cover;
+}
+.title {
+    font-family: myFirstFont;
+    font-size: 45px;
+}
