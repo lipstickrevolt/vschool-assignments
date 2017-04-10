@@ -1,0 +1,17 @@
+.navbar-brand img{
+    width: 100%;
+    margin-top: -15px;
+}
+.navbar-brand {
+    width: 100px;
+}
+.selectBox {
+    display: flex;
+}
+.col-md-10 {
+    text-align: center;
+}
+.col-md-10 div {
+    text-align: center;
+    display: block;
+}

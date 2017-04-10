@@ -1,0 +1,40 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-10 col-md-offset">
+            <div>
+                <h1>Enter new bounty:</h1>
+                <input type="text" ng-model="fName" placeholder="First Name">
+                <input type="text" ng-model="lName" placeholder="Last Name">
+                <div class="selectBox">
+                <label for="bountyType">Select Type of Enemy: </label>
+                <select name="bountyType" id="bountyType" ng-model="data.bountyType">
+                    <option value="">---Plase Select----</option>
+                    <option value="{{data.option1}}">Sith</option>
+                    <option value="Jedi">Jedi</option>
+                </select>
+                </div>
+                <div class="selectBox">
+                <label for="living">Select if Alive or Dead: </label>
+                <select name="living" id="living" ng-model="data.living">
+                    <option value="">---Plase Select----</option>
+                    <option value="{{data.alive1}}">Alive</option>
+                    <option value="Dead">Dead</option>
+                </select>
+                </div>
+            </div>
+            <div>
+                Kills:
+            </div>
+            <div>
+                Type: {{data.bountyType}}
+            </div>
+            <div>
+                Life status: {{data.living}}
+            </div>
+            <div ng-repeat="item in allBounty">
+                {{allBounty.firstName}}
+            </div>
+            {{test}}
+        </div>
+    </div>
+</div>
