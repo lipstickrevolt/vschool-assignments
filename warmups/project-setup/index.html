@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+   <div>
+       <h1>To Add or To Multiply</h1>
+   </div>
+    <div class="box" ng-controller="myCtrl">
+       <h3>Add</h3>
+        <input type="number" placeholder="First Number" ng-model="firstNum">
+        <input type="number" placeholder="Second Number" ng-model="secNum">
+        <button ng-click="add()">Add Numbers</button>
+        <label>Result: {{sum}}</label>
+    </div>
+    <br>
+    <div class="box" ng-controller="multiplyCtrl">
+       <h3>Multiply</h3>
+        <input type="number" placeholder="First Number" ng-model="firstMul">
+        <input type="number" placeholder="Second Number" ng-model="secMul">
+        <button ng-click="multiply()">Multiply Numbers</button>
+        <label>Result: {{sumMul}}</label>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Get Current Temp</title>
+</head>
+<body ng-controller="mainCtrl" >
+   <div ng-repeat="item in temps">
+    {{ item | convertTemp: 'C' }}
+    </div>
+    <div>
+      <h3>Enter Cooridnates:</h3>
+       <input type="number" placeholder="latitude" ng-model="lat">
+       <input ng-model="long" type="number" placeholder="longitude">
+       <button ng-click="submit(lat, long)">Get Weather</button>
+        
+        <div>Timezone: {{weather.timezone}}</div>
+        <div class="tempSection">
+        <div>Current Temperature: {{currentTemp | convertTemp: selectTemp}}
+        </div>
+        <select ng-model="selectTemp" ng-options="item for item in temparray"></select>
+        <div></div>
+        </div>
+        <div>Weather Summary: {{weather.currently.summary}}</div>
+        
+        
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    
+    <script src="app.js"></script>
+    <script src="services.js"></script>
+</body>
+</html>

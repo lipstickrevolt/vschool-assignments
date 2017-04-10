@@ -42,7 +42,7 @@
     
     </div>
     <div class="row">
-        <div ng-repeat="item in todoArrays">
+        <div ng-repeat="item in todoArrays track by $index">
             <div class="col-md-3 col-xs-6 holdEachtodo" id="{{item._id}}">
                 <div ng-class="{ 'strike': strikeMe }">
                     <div ng-class="{ 'afterComplete': strikeMe }" class="title">{{item.title}}</div>
@@ -50,7 +50,7 @@
                     <div ng-class="{ 'afterComplete': strikeMe }" class="price">${{item.price}}</div>
                     <div class="holdImg" ng-class="{ 'holdImgX': strikeMe }">
                         <div ng-class="{ 'siblingX': strikeMe }"></div>
-                        <img ng-class="{ 'strikeImage': strikeMe }" class="image" src="{{item.imgUrl}}">
+                        <img ng-class="{ 'strikeImage': strikeMe }" class="image" ng-src="{{item.imgUrl}}">
                     </div>
                 </div>
                 <div class="complete">
@@ -59,13 +59,14 @@
                 </div>
                 <div class="deleteBtn">
                     Delete
-                    <button ng-click="remove(item._id)">x</button>
+                    <button ng-click="remove(item._id, $index)">x</button>
                 </div>
             </div>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script src="app.js"></script>
+    <script src="service.js"></script>
 </body>
 
 </html>

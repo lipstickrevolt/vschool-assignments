@@ -1,3 +1,6 @@
+.sideHead {
+    text-align: center;
+}
 .search {
     font-style: italic;
     position: relative;
@@ -24,8 +27,130 @@ div.container-fluid {
     background-color: rgba(252, 202, 178, 0.56);
     padding-top: 20px;
     padding-bottom: 20px;
+    
+}
+.input-group {
+    text-align: center;
+    margin: auto;
 }
 li a{
     color: black;
     margin-right: 60px;
+}
+.envelope {
+    content: url(img/envelope.png);
+    height: 18px;
+}
+.emailBtn {
+    background: white;
+    border: none;
+    height: 34px;
+}
+.emailform {
+    border: none;
+    text-decoration: none;
+    box-shadow: none;
+}
+::-webkit-input-placeholder {
+    color: #545454 !important;
+}
+.social li{
+    display: block;
+}
+.socialImg {
+    height: 10px;
+}
+.social {
+    display: flex;
+    text-align: center;
+}
+.headArticle {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Avenir, Helvetica Neue, Helvetica, Arial, sans-serif;
+    letter-spacing: 2px;
+    font-weight: 200;
+    color: #999999;
+    display: block;
+}
+.headArticle:after {
+    margin-left: 10px;
+}
+.headArticle:before {
+    margin-right: 10px;
+}
+.headArticle:before, .headArticle:after {
+    border-bottom: 1px solid #ddd;
+    line-height: 18px;
+    vertical-align: middle;
+    width: 15%;
+    content: " ";
+    display: inline-block;
+    max-width: 80px;
+    box-sizing: border-box;
+    
+}
+.headArticle {
+    font-size: 12px;
+    color: #545454;
+}
+.titleArticle {
+    font-style: normal; 
+    font-family: Avenir, Helvetica Neue, Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+@font-face {
+    font-family: bebasFont;
+    src: url(fonts/bebasneus.woff);
+}
+.titleArticle a {
+    color: black;
+    font-family: bebasFont;
+    letter-spacing: .2em;
+    line-height: 32px;
+    font-weight: 400;
+    text-decoration: none;
+}
+.titleArticle {
+    margin: 24px 0 19px;
+}
+#main-content {
+    padding-top: 60px;
+    padding: 40px;
+}
+.categories {
+    text-align: center;
+}
+.categories a {
+    text-decoration: none;
+    color: #999;
+    font-style: italic;
+    font-weight: 200;
+    font-family: "avenir";
+}
+.post-body img {
+    max-width: 100%;
+}
+.more-link {
+    margin: 32px auto 0;
+    width: 106px;
+    display: block;
+}
+.post {
+    font-weight: 400;
+    color: #545454;
+    line-height: 20px;
+    font-family: "avenir", sans-serif;
+    padding-bottom: 10px;
+}
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+@media (min-width: 768px)
+    .col-sm-8 {
+ width: 66.6666667%   
 }

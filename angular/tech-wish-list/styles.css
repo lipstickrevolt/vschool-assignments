@@ -1,0 +1,38 @@
+.navbar {
+    margin-top: 20px;
+}
+.homepage {
+    margin-top: 120px;
+}
+.wishpage {
+    margin-top: 170px;
+}
+.otherpage {
+    margin-top: 170px
+}
+.pic {
+    width: 100px;
+}
+.boxes {
+    display: flex;
+    margin: 10px;
+}
+.home {
+    margin-top: 170px;
+}
+.btn a{
+    color: black;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For mobile phones: */
+    .otherpage {
+        margin-top: 120px;
+    }
+    .wishpage {
+        margin-top: 120px;
+    }
+    .home {
+        margin-top: 100px;
+    }
+}

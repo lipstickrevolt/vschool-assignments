@@ -2,14 +2,23 @@
     font-family: myFirstFont;
     src: url("/font/DOCALLISMEONSTREET.ttf");
 }
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 560px;}
+}
+
 img {
     height: 200px;
 }
 .textBox {
     text-align: center;
     width: 700px;
-    float: right;
+    right:0;
     padding-top: 30px;
+    left: 0px;
+    position: relative;
+    animation: mymove 0.5s forwards;
+    animation-timing-function: linear;
 
 }
 .favRappers {
@@ -22,4 +31,8 @@ body {
 .title {
     font-family: myFirstFont;
     font-size: 45px;
+}
+.side {
+    float: right;
+    margin-right: 20px;
 }
