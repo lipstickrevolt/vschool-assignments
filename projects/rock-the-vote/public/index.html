@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Rock the Vote!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body ng-controller="mainCntrl">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
+        <div >
+            <h1>Enter Concern:</h1>
+            <input ng-model="newConcern.title" placeholder="Subject of Concern">
+            <input ng-model="newConcern.description" placeholder="Description of Concern">
+            <button ng-click="submit(newConcern)">Submit Concern</button>
+        </div>
+
+        <div class="allConcerns">
+            <div class="concern" ng-repeat="concern in allConcerns">
+                <div>Title: {{concern.title}}</div>
+                <div>Description: {{concern.description}}</div>
+                <div>
+                    <button ng-click="like(concern)">Like</button>
+                    Likes: {{concern.like}}
+                </div>
+                <div>
+                    <button ng-click="disLike(concern)">Dislike</button>
+                    Dislikes: {{concern.disLike}}
+                </div>
+                <div>Total Interactions: {{concern.totalVotes}}</div>
+                <div>
+                    <input ng-model="concern.comment" placeholder="Comment">
+                    <button ng-click="addComment(concern.comment, concern)">Add Comment</button>
+                </div>
+                <div>
+                    <h3>Comments:</h3>
+                    <div ng-repeat="comment in concern.comments track by $index">
+                        <div>{{comment}}</div>
+                        <button ng-click="deleteComment(comment, $index)">x</button>
+                    </div>
+                </div>
+                <div>
+                    <button ng-click="delete(concern, $index)">Delete</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+<script src="app.js"></script>
+<script src="service.js"></script>
+</body>
+</html>
