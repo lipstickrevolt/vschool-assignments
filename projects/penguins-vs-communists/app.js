@@ -21,7 +21,7 @@ flipCoin();
 function sendNuke(party, onHit, onMiss) {
     var hitMiss = Math.floor(Math.random() * ((3 - 1) + 1));
     if (penguins.population <= 0 || commis.population <= 0) {
-        return console.log(party.name + "have won the battle!");
+        return console.log(party.name + " have won the battle!");
     } else {
         if (hitMiss === 1) {
             onHit(party);
@@ -35,7 +35,7 @@ function sendNuke(party, onHit, onMiss) {
 function onHit(party) {
     var ranDam = Math.floor(Math.random() * ((50000 - 10000) + 10000));
     party.population -= ranDam;
-    console.log(party.name + " took " + ranDam + "damage points and has a new population of " + party.population);
+    console.log(party.name + " took " + ranDam + " damage points and has a new population of " + party.population);
     if (party.name === "Penguins") {
         sendNuke(commis, onHit, onMiss);
     } else if (party.name === "Communists") {

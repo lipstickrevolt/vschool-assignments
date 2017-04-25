@@ -1,5 +1,19 @@
 .sideHead {
     text-align: center;
+    color: black;
+    font-family: bebasFont, sans-serif;
+    font-size: 21px;
+    margin-top: -15px;
+}
+.sideHead span {
+    background-color: #fff;
+    padding: 0 5px;
+    letter-spacing: .1em;
+    font-family: bebasFontLight;
+}
+#sidebar {
+    margin-top: 100px;
+    padding-left: 20px;
 }
 .search {
     font-style: italic;
@@ -29,6 +43,10 @@ div.container-fluid {
     padding-bottom: 20px;
     
 }
+.widget {
+    border: 1px solid #e0e0e0;
+    margin-bottom: 54px;
+}
 .input-group {
     text-align: center;
     margin: auto;
@@ -45,6 +63,9 @@ li a{
     background: white;
     border: none;
     height: 34px;
+}
+.fa:hover {
+    color: rgb(252, 202, 178);
 }
 .emailform {
     border: none;
@@ -63,6 +84,7 @@ li a{
 .social {
     display: flex;
     text-align: center;
+    padding-left: 0;
 }
 .headArticle {
     text-align: center;
@@ -78,6 +100,11 @@ li a{
 }
 .headArticle:before {
     margin-right: 10px;
+}
+.share i {
+    font-size: 30px;
+    color: #f3c3ac;
+    letter-spacing: 1em;
 }
 .headArticle:before, .headArticle:after {
     border-bottom: 1px solid #ddd;
@@ -102,6 +129,10 @@ li a{
 @font-face {
     font-family: bebasFont;
     src: url(fonts/bebasneus.woff);
+}
+@font-face {
+    font-family: bebasFontLight;
+    src: url(fonts/BebasNeueLight.otf);
 }
 .titleArticle a {
     color: black;
@@ -135,6 +166,23 @@ li a{
     margin: 32px auto 0;
     width: 106px;
     display: block;
+    border: 1px solid #ccc;
+    color: #ccc;
+    background-color: transparent;
+    text-align: center;
+    font-family: bebasFont, sans-serif;
+    font-size: 17px;
+    margin: 32px auto 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 106px;
+    font-style: normal;
+    transition: background-color .2s;
+}
+.more-link:hover {
+    background-color: #ccc;
+    color: white;
+    text-decoration: none;
 }
 .post {
     font-weight: 400;

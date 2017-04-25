@@ -19,7 +19,11 @@ angular.module("myApp", ["ngRoute"])
     }); 
     
 }]);
-    
+
+function myFunction(x) {
+    $(".x").toggleClass("change");
+
+}
 //    
 //.controller('mainCtrl', ["$scope", "getBounties", function($scope, getBounties){
 ////    getBounties.getBounty().then(function(data){

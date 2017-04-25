@@ -22,7 +22,7 @@ app.post('/bounty', function (req, res) {
     newBounty._id = uuid();
     newBounty.firstName = req.body.firstName;
     bounties.push(newBounty);
-    res.send('your ' + newBounty.firstName + ' has been added');
+    res.send(newBounty);
 
 })
 

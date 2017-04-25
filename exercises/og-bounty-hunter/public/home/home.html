@@ -1,40 +1,101 @@
-<div class="container-fluid">
+<div class="containerHome">
     <div class="row">
-        <div class="col-md-10 col-md-offset">
-            <div>
-                <h1>Enter new bounty:</h1>
-                <input type="text" ng-model="fName" placeholder="First Name">
-                <input type="text" ng-model="lName" placeholder="Last Name">
+        <div class="col-xs-10 col-xs-offset-1 col-md-10 col-md-offset-1">
+                <h1 class="heading">Enter new bounty:</h1>
+                <input type="text" ng-model="newBounty.fName" placeholder="First Name">
+                <input type="text" ng-model="newBounty.lName" placeholder="Last Name">
+                <input type="number" placeholder="Bounty Price" ng-model="newBounty.price">
                 <div class="selectBox">
-                <label for="bountyType">Select Type of Enemy: </label>
-                <select name="bountyType" id="bountyType" ng-model="data.bountyType">
-                    <option value="">---Plase Select----</option>
-                    <option value="{{data.option1}}">Sith</option>
-                    <option value="Jedi">Jedi</option>
-                </select>
+                    <div>
+                        <label class="label" for="bountyType">Select Enemy Type: </label>
+                        <select name="bountyType" id="bountyType" ng-model="newBounty.bountyType">
+                            <option value="">---Please Select----</option>
+                            <option value="Sith">Sith</option>
+                            <option value="Jedi">Jedi</option>
+                        </select>
+
+                    </div>
+                    <div>
+                        <label class="label" for="living">Select if Alive or Dead: </label>
+                        <select name="living" id="living" ng-model="newBounty.living">
+                            <option value="">---Please Select----</option>
+                            <option value="Alive">Alive</option>
+                            <option value="Dead">Dead</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="selectBox">
-                <label for="living">Select if Alive or Dead: </label>
-                <select name="living" id="living" ng-model="data.living">
-                    <option value="">---Plase Select----</option>
-                    <option value="{{data.alive1}}">Alive</option>
-                    <option value="Dead">Dead</option>
-                </select>
+           
+        </div>
+       
+            <div class="col-xs-10">
+                <div class="newBounty">
+                   
+                        <div class="col-xs-5 col-xs-offset-1 col-md-3">
+                            <div>Name:</div>
+                            <div> {{newBounty.fName}}&nbsp;{{newBounty.lName}}
+                            </div>
+                        </div>
+
+                        <div class="col-xs-5 col-md-3">
+                            <div>Price:</div>
+                            <div>{{newBounty.price | currency: '$'}}</div>
+                        </div>
+                        <div class="col-xs-5 col-md-3">
+                            <div>Type:</div> <div>{{newBounty.bountyType}}</div>
+                        </div>
+                        <div class="col-xs-6 col-md-3 life">
+                            <div>Life Status:</div> <div class="lifeStat">{{newBounty.living}}</div>
+                        </div>
                 </div>
             </div>
-            <div>
-                Kills:
+        
+       
+            <div class="col-xs-8 col-xs-offset-2 col-md-offset-4">
+                <div class="rotateRow">
+                    <div class="rotate">
+                        <span><button class="rotateBtn" ng-click="submit(newBounty)">Submit New Bounty</button></span>
+                        <div class="dot"></div>
+                    </div>
+                </div>
             </div>
-            <div>
-                Type: {{data.bountyType}}
+        </div>
+    
+</div>
+<div class="row">
+    <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+        <div class="row">
+            <div class="col-md-3 col-sm-4 col-xs-10 resultBox" ng-repeat="item in bounties track by $index">
+                <div>{{item.fName}}&nbsp;{{item.lName}}</div>
+                <div>{{item.price | currency: '$'}}</div>
+                <div>{{item.bountyType}}</div>
+                <div>{{item.living}}</div>
+                <button class="bttn-unite bttn-md bttn-primary" ng-click="delete(item, $index)">x</button>               
+                <button class="bttn-stretch bttn-md bttn-primary" ng-click="edit()">edit</button>
+                <div ng-show="editBox">
+                    <input ng-model="item.fName" placeholder="{{item.fName}}">
+                    <input ng-model="item.lName" placeholder="{{item.lName}}">
+                    <input ng-model="item.price" placeholder="{{item.price | currency: '$'}}">
+                    <div class="selectBox">
+                        <label for="bountyType">Select Enemy Type: </label>
+                        <select name="bountyType" id="bountyType" ng-model="item.bountyType">
+                            <option value="">---Plase Select----</option>
+                            <option value="Sith">Sith</option>
+                            <option value="Jedi">Jedi</option>
+                        </select>
+
+
+                        <label for="living">Select if Alive or Dead: </label>
+                        <select name="living" id="living" ng-model="item.living">
+                            <option value="">---Plase Select----</option>
+                            <option value="Alive">Alive</option>
+                            <option value="Dead">Dead</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-success" ng-click="save(item)">Save Edits</button>
+                </div>
             </div>
-            <div>
-                Life status: {{data.living}}
-            </div>
-            <div ng-repeat="item in allBounty">
-                {{allBounty.firstName}}
-            </div>
-            {{test}}
+
         </div>
     </div>
+</div>
 </div>

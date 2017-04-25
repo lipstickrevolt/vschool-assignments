@@ -1,0 +1,101 @@
+
+
+@font-face {
+    font-family: fourHand;
+    src: url(fourHand_TRIAL.ttf);
+}
+body {
+    background-image: url("https://s-media-cache-ak0.pinimg.com/originals/1d/06/4c/1d064cf437bfa51a82d7f3500b2c5a9e.jpg");
+}
+.likes {
+    display: inline-block;
+    margin-top: 10px;
+    padding-right: 0;
+    font-family: "fourHand";
+    font-size: 24px;
+}
+.row {
+    margin-bottom: 10px;
+}
+.enterC {
+    font-family: "fourHand";
+    font-size: 50px;
+    margin-bottom: -20px;
+}
+.totalLikes {
+    margin-top: 10px;
+    margin-right: 10px;
+    font-family: "fourHand";
+    font-size: 24px;
+}
+.reg {
+    font-family: "Courier New";
+}
+.stack {
+    border: 1px solid black;
+    position:relative;
+    background-color: deepskyblue;
+    width: inherit;
+}
+.delete {
+    text-align: right;
+    margin-top: 10px;
+}
+.comments {
+    background-color: #c0c1c4;
+}
+.comments h3 {
+    color: #000;
+    float: left;
+    padding-left: 20px;
+}
+.inputTitle {
+    margin-right: 20px;
+    font-family: "fourHand";
+    font-size: 32px;
+}
+.inputDesc {
+    font-family: "fourHand";
+    font-size: 32px;
+}
+
+.btn-default {
+    height: 50px;
+    font-family: "fourHand";
+    font-size: 24px;
+    padding-top: 10px;
+}
+.comBox {
+    border: 1px solid black;
+    color: #000;
+    padding: 20px;
+    margin: 20px;
+    position: relative;
+    text-align: center;
+}
+.comBox div {
+    text-align: left;
+}
+.comBox button {
+    color: black;
+    background: #d1760e;
+    position: static;
+    margin-left: auto;
+    margin-top: -20px;
+}
+.banner {
+    text-align: center;
+}
+.concernInput {
+    text-align: center;
+}
+.col-xs-10 {
+    width: 80%;
+}
+@media (max-width: 500px) {
+    .inputTitle {font-size: 20px;}
+    .inputDesc {font-size: 20px;}
+    .likes {font-size: 20px;}
+    .totalLikes {font-size: 20px;}
+    .clicker {font-size: 15px;}
+}

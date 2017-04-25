@@ -2,6 +2,17 @@
 <html lang="en" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Text Input Effects | Set 2</title>
+    <meta name="description" content="Simple ideas for enhancing text input interactions"/>
+    <meta name="keywords" content="input, text, effect, focus, transition, interaction, inspiration, web design"/>
+    <meta name="author" content="Codrops"/>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/demo.css"/>
+    <link rel="stylesheet" type="text/css" href="css/set2.css"/>
     <title>Rock the Vote!</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -9,51 +20,139 @@
 </head>
 <body ng-controller="mainCntrl">
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
-        <div >
-            <h1>Enter Concern:</h1>
-            <input ng-model="newConcern.title" placeholder="Subject of Concern">
-            <input ng-model="newConcern.description" placeholder="Description of Concern">
-            <button ng-click="submit(newConcern)">Submit Concern</button>
-        </div>
 
-        <div class="allConcerns">
-            <div class="concern" ng-repeat="concern in allConcerns">
-                <div>Title: {{concern.title}}</div>
-                <div>Description: {{concern.description}}</div>
-                <div>
-                    <button ng-click="like(concern)">Like</button>
-                    Likes: {{concern.like}}
-                </div>
-                <div>
-                    <button ng-click="disLike(concern)">Dislike</button>
-                    Dislikes: {{concern.disLike}}
-                </div>
-                <div>Total Interactions: {{concern.totalVotes}}</div>
-                <div>
-                    <input ng-model="concern.comment" placeholder="Comment">
-                    <button ng-click="addComment(concern.comment, concern)">Add Comment</button>
-                </div>
-                <div>
-                    <h3>Comments:</h3>
-                    <div ng-repeat="comment in concern.comments track by $index">
-                        <div>{{comment}}</div>
-                        <button ng-click="deleteComment(comment, $index)">x</button>
-                    </div>
-                </div>
-                <div>
-                    <button ng-click="delete(concern, $index)">Delete</button>
-                </div>
-            </div>
-        </div>
+    <div class="row">
+        <div class="col-md-10 col-md-offset-4 col-sm-10 col-sm-offset-4 col-lg-10 col-lg-offset-4 col-xs-10 col-xs-offset-1 banner">
+            <img class="bannerImg img-responsive"
+                 src="http://www.business-digest.eu/wp-content/uploads/2012/05/WEB226WhatMatters1.jpg">
         </div>
     </div>
+    <div class="row concernInput">
+        <div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-2 col-sm-10 col-xs-10 col-xs-offset-1">
+            <section class="content bgcolor-10">
+                <h1 class="enterC">Enter Concern</h1>
+                <span class="input input--shoko">
+					<input ng-model="newConcern.title" class="input__field input__field--shoko" type="text"
+                           id="input-4"/>
+					<label class="input__label input__label--shoko" for="input-4">
+						<span class="input__label-content input__label-content--shoko">Subject of Concern</span>
+					</label>
+					<svg class="graphic graphic--shoko" width="300%" height="100%" viewBox="0 0 1200 60"
+                         preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+						<path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>
+                <span class="input input--shoko">
+					<input ng-model="newConcern.description" class="input__field input__field--shoko" type="text"
+                           id="input-5"/>
+					<label class="input__label input__label--shoko" for="input-5">
+						<span class="input__label-content input__label-content--shoko">Description of Concern</span>
+					</label>
+					<svg class="graphic graphic--shoko" width="300%" height="100%" viewBox="0 0 1200 60"
+                         preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+						<path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>
+                <button class="btn btn-default submitConcern" ng-click="submit(newConcern)">Submit Concern</button>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-2 col-lg-10 col-lg-offset-2  col-xs-10 col-xs-offset-1">
+            <div class="row allConcerns">
+                <div class="col-xs-10 col-md-10 col-md-offset-1 stack" ng-repeat="concern in allConcerns">
+                    <div class="row">
+                        <div class="col-xs-4 col-md-4"><h1 class="inputTitle">Concern Title: <span class="reg">{{concern.title}}</span>
+                        </h1></div>
+                        <div class="col-xs-4 col-md-5"><h2 class="inputDesc">Concern Description: <span class="reg">{{concern.description}}</span>
+                        </h2></div>
+
+                        <div class="col-md-4 delete">
+                            <button class="btn clicker" ng-click="delete(concern, $index)">Delete Concern</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 col-md-3 col-lg-3 likes">
+                            <button class="btn clicker" ng-click="like(concern)"><span
+                                    class="glyphicon glyphicon-thumbs-up"
+                                    aria-hidden="true"></span>
+                            </button>
+                            Likes: <span class="reg">{{concern.like}}</span>
+                        </div>
+                        <div class="col-xs-3 col-md-3 likes">
+                            <button class="btn clicker" ng-click="disLike(concern)"><span
+                                    class="glyphicon glyphicon-thumbs-down"
+                                    aria-hidden="true"></span></button>
+                            Dislikes: <span class="reg">{{concern.disLike}}</span>
+                        </div>
+                        <div class="col-xs-6 col-md-4 totalLikes">Total Interactions: <span class="reg">{{concern.totalVotes}}</span>
+                        </div>
+                    </div>
+                    <div class="row inputComm">
+                        <div class="col-md-8 col-md-offset-2">
+                            <input ng-model="concern.comment" placeholder="Comment">
+                            <button class="btn clicker" ng-click="addComment(concern.comment, concern)">Add Comment
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row comments">
+                        <h3>Comments:</h3>
+                        <div class="comBox" ng-repeat="comment in concern.comments">
+                            <div>{{comment}}</div>
+                            <button class="btn" ng-click="deleteComment(concern, $index)">x</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
 </div>
+
+<script src="js/classie.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
 <script src="app.js"></script>
 <script src="service.js"></script>
+<script>
+    (function () {
+        // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+        if (!String.prototype.trim) {
+            (function () {
+                // Make sure we trim BOM and NBSP
+                var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+                String.prototype.trim = function () {
+                    return this.replace(rtrim, '');
+                };
+            })();
+        }
+
+        [].slice.call(document.querySelectorAll('input.input__field')).forEach(function (inputEl) {
+            // in case the input is already filled..
+            if (inputEl.value.trim() !== '') {
+                classie.add(inputEl.parentNode, 'input--filled');
+            }
+
+            // events:
+            inputEl.addEventListener('focus', onInputFocus);
+            inputEl.addEventListener('blur', onInputBlur);
+        });
+
+        function onInputFocus(ev) {
+            classie.add(ev.target.parentNode, 'input--filled');
+        }
+
+        function onInputBlur(ev) {
+            if (ev.target.value.trim() === '') {
+                classie.remove(ev.target.parentNode, 'input--filled');
+            }
+        }
+    })();
+</script>
 </body>
 </html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lyrics Revolt</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-static-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Lyrics Revolt</a>
+                <button ng-click="toggle = !toggle" ng-class="{'change': toggle}" class="navbar-toggle container hamburger" data-toggle="collapse" data-target=".navHeaderCollapse" onclick="myFunction()">
+
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+
+                </button>
+            </div>
+            <div class="collapse navbar-collapse navHeaderCollapse">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="#/home">Home</a></li>
+                    <li><a href="#/seeHash">See Lyrics</a></li>
+                    <li><a href="#/women">More info on Artist</a></li>
+                </ul>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+    <ng-view></ng-view>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="app.js"></script>
+    <script src="seeHash/seeHash.js"></script>
+    <script src="home/home.js"></script>
+    <script src="women/women.js"></script>
+    <script src="service.js"></script>
+</body>
+
+</html>

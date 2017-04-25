@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/lipstickrevolt/vschool-assignments/issues"
   },
-  "homepage": "https://github.com/lipstickrevolt/vschool-assignments#readme"
+  "homepage": "https://github.com/lipstickrevolt/vschool-assignments#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mongoose": "^4.9.4"
+  }
 }

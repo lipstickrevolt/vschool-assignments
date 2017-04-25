@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-md-10 col-md-offset-1">
+            <h1 class="artistName"> {{otherStuff}}</h1>
+            <h2 class="artisTwitter">
+                <i class="fa fa-twitter" aria-hidden="true">
+                    <a src="{{twitterUrl}}">{{twitterUrl}}</a></i>
+            </h2>
+
+            <div>
+                Genres:
+                <div ng-repeat="genre in genres">
+                    <h3>{{genre.music_genre_name}}</h3>
+                </div>
+            </div>
+            <div>Country: {{artistCountry}}</div>
+
+        </div>
+    </div>
+</div>
