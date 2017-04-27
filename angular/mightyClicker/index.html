@@ -1,21 +1,41 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="myApp">
+
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel='stylesheet'href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel='stylesheet' href="styles.css">
 </head>
-<body>
-<div class="holdItems">
- <div>Score:</div>
-  <button class="red"></button>
-  </div>
-  <div class="holdItems">
- <div>Score:</div>
-  <button class="blue"></button>
-  </div>
-  
-   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+<body ng-controller="mainCtrl">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <h1>Battle of Red and Blue</h1>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-md-10 col-md-offset-1 allscores">
+               <div class="scoreBox">
+                <button ng-click="clickRed()" class="btn both red">Red</button>
+                <div ng-model="scoreRed" class="score">Score: {{scoreRed}}</div>
+                </div>
+                <div class="scoreBox">
+                <button ng-click="clickBlue()" class="btn both blue">Blue</button>
+                <div ng-model="scoreBlue" class="score">Score: {{scoreBlue}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script src="app.js"></script>
+
+    <script src="services/BlueService.js"></script>
+
+    <script src="services/RedService.js"></script>
 </body>
+
 </html>
