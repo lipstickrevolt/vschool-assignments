@@ -16,7 +16,7 @@ angular.module("myApp")
 
             getLyrics.getSocial(artistID).then(function (data) {
 
-                $location.path("/seeHash");
+                $location.path("/seeLyrics");
 
             })
             

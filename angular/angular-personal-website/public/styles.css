@@ -1,15 +1,22 @@
-.header {
-    background-color: white;
+#header {
+    background-color: rgba(255,255,255, .8);
     width: 465px;
     padding: 10px;
     text-align: center;
-    border: 1px solid aquamarine;
+    border: 5px solid aquamarine;
     margin: auto;
     margin-bottom: 10px;
+    border-radius: 50px;
 }
 .container {
     display: inline-block;
     cursor: pointer;
+}
+.input {
+    border: 3px solid #F38A8A;
+    border-radius: 5px;
+    height: 40px;
+    text-align: center;
 }
 .navbar-brand {
     font-family: 'Pacifico', cursive;
@@ -51,8 +58,9 @@ body {
     background-image: url(img/2.jpg);
     background-size: cover;
 }
-.lyricBox {
+.allLyrics{
     width: 100%;
+    font-family: "Arial Narrow" !important;
 }
 .social {
     background-color: #ebebeb;
@@ -60,26 +68,82 @@ body {
     margin-top: 70px;
     padding: 10px;
     position: relative;
+    text-align: center;
+    border-radius: 15px;
 }
-.social a {
-    position: absolute;
+.social i {
+    position: relative;
+    text-align: center;
 }
-.artistName {
+#artistName {
     background-color: white;
     border: 1px solid aquamarine;
     width: 65%;
     padding: 10px;
+    border-radius: 15px;
 }
 .artistInfo {
     text-align: center;
     margin-bottom: 20px;
     margin: auto;
 }
+.artisTwitter {
+    background: #F38A8A;
+    border-radius: 15px;
+}
+.holdSocial {
+    margin: auto;
+}
 .getLyricBtn {
     margin: 20px;
+    background-color: #55443D;
+    border-color: #55443D;
+}
+.country {
+    background-color: #F1EDD0;
+    padding: 10px;
+    border-radius: 15px;
+}
+.holdGenre {
+    background-color: aquamarine;
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+.getLyricBtn:hover {
+    background-color: #F1EDD0;
+    border-color: #F1EDD0;
+    color: #000;
 }
 @media only screen and (max-width: 500px) {
-    .header {
+    #header {
         width: 265px;
+        height: 130px;
+    }
+    .ng-binding {
+        width: 370px;
+        height: 240px;
+    }
+    #artistName {
+        width: 260px;
+    }
+    #genre {
+        height: 50px;
+    }
+    .box {
+        font-size: 24px;
+        margin: 10px;
+        padding: 10px;
+    }
+    .col-xs-10 {
+        margin: auto;
+    }
+    .country {
+        width: 320px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+    .country h3 {
+        margin-top: 0;
     }
 }

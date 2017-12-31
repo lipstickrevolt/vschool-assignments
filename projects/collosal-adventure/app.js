@@ -94,20 +94,6 @@ function wildEnemyAttack() {
         if (player.life < 1) {
             console.log("You have been killed! GAME OVER!");
         }
-//         else {
-//            if (randMonster.name === "Zombie") {
-//                console.log("get ready to fight " + randMonster.name);
-//                console.log("now your life is " + player.life + " keep on fighting!");
-//            } else if (randMonster.name === "Hitler") {
-//                console.log("get ready to fight " + randMonster.name);
-//                console.log("now your life is " + player.life + " keep on fighting!");
-//
-//            } else if (randMonster.name === "Donald Trump") {
-//                console.log("get ready to fight " + randMonster.name);
-//                console.log("now your life is " + player.life + " keep on fighting!");
-//
-//            }
-//        }
     }
 }
 

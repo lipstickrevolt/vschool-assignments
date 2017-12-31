@@ -1,7 +1,6 @@
 angular.module("myApp")
 
-.controller("seeHashController", ["$scope", "getLyrics", function($scope, getLyrics){
-    console.log(getLyrics.lyrics);
+.controller("seeLyricsController", ["$scope", "getLyrics", function($scope, getLyrics){
 
     if (getLyrics.lyrics === undefined){
         $scope.lyrics = "Go to home page to enter an Artist Name and Track!";
@@ -11,6 +10,8 @@ angular.module("myApp")
         $scope.lyrics = getLyrics.lyrics;
 
         $scope.twitterUrl = getLyrics.twitterUrl.artist_twitter_url;
+
+        $scope.artistName = getLyrics.twitterUrl.artist_name;
     }
     
 }])
@@ -18,7 +19,7 @@ angular.module("myApp")
 .directive("seeHash", function(){
     return {
         restrict: 'E',
-        template: "<p class='lyricBox'><pre>{{lyrics}}</pre></p>"
+        template: "<p class='lyricBox'><pre class='allLyrics'>{{lyrics}}</pre></p>"
     }
     
 })

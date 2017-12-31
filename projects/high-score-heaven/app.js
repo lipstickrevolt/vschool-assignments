@@ -1,13 +1,4 @@
-//var readlineSync = require('readline-sync');
-//
-//var userName = readlineSync.question('May I have your name? ');
-//
-//console.log('Hi ' + userName + '!');
-//
-//var highScore = readlineSync.question('What was your High Score?');
 
-//console.log('Hi ' + userName + '!');
-//if (readlineSync.keyInYN("Would you like to hear sometrash talk?") === true) {
 var trashTalk = ["I'm better", "My little sister got that score", "you probably used cheat codes", "that's more of a low score than a high one"];
 
 var randTT = trashTalk[Math.floor(Math.random() * (3 - 0) + 0)];
@@ -50,15 +41,16 @@ function updateForm() {
     row.appendChild(td4);
 
     table.children[0].appendChild(row);
-}
-
-document.getElementById("submit").addEventListener("click", updateForm);
-
-$("#submit").click(function(){
+    $("#submit").click(function(){
     if ($("input.confirm").is(':checked')){
         alert(randTT);
     } else {
         console.log("awww");
     }
 });
+}
+
+document.getElementById("submit").addEventListener("click", updateForm);
+
+
 

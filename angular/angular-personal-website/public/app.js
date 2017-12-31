@@ -12,13 +12,13 @@ angular.module("myApp", ["ngRoute"])
         templateUrl: "home/home.html",
         controller: "homeController"
     })
-        .when("/seeHash", {
-        templateUrl: "seeHash/seeHash.html",
-        controller: "seeHashController"
+        .when("/seeLyrics", {
+        templateUrl: "seeLyrics/seeLyrics.html",
+        controller: "seeLyricsController"
     })
-    .when("/women", {
-        templateUrl: "women/women.html",
-        controller: "womenController"
+    .when("/moreInfo", {
+        templateUrl: "moreInfo/moreInfo.html",
+        controller: "moreInfoController"
     })
     .otherwise({
         redirectTo: "/home"

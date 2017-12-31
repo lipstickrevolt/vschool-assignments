@@ -5,12 +5,8 @@ var cheepCheepTotalPrice;
 var goombasTotalPrice;
 var bobOmbsTotalPrice;
 
-
-var finalTotal = goombasTotalPrice + bobOmbsTotalPrice + cheepCheepTotalPrice;
-
 function goombasCalc(){
     var goombasTotalCaught = document.getElementById("goombaInput").value;
-    console.log(goombasTotalCaught);
     document.getElementById("goombaOutput").innerHTML = goombasPrice * goombasTotalCaught;
     goombasTotalPrice = goombasPrice * goombasTotalCaught;
     console.log(goombasTotalPrice); 

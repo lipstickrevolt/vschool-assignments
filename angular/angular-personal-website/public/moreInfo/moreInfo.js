@@ -1,6 +1,6 @@
 angular.module("myApp")
 
-.controller("womenController", ["$scope", "getLyrics", function($scope, getLyrics){
+.controller("moreInfoController", ["$scope", "getLyrics", function($scope, getLyrics){
 
     if (getLyrics.twitterUrl === undefined){
         $scope.twitterUrl = "N/A";
